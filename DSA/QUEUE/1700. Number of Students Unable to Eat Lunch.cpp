@@ -2,7 +2,8 @@ class Solution {
 public:
     int countStudents(vector<int>& students, vector<int>& sandwiches) {
        queue<int> q(students.begin(),students.end());
-       stack<int>s(sandwiches.rbegin(), sandwiches.rend());
+       stack<int>s(sandwiches.rbegin(), sandwiches.rend()); //when reading a stack from a vector,
+                                                           // reverse the vector so the order matches the stack's logic
 
        int stayed=0;
        while(!q.empty() && stayed<q.size()){
