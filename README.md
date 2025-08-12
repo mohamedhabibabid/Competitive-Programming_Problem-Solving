@@ -12,7 +12,7 @@ This repository contains my C++ solutions to competitive programming problems fr
 ---
 
 ## 🛠️ Tech Stack
-- **C++**
+- **C++ (mainly)**
 - Python
 
 ---
