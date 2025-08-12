@@ -19,4 +19,5 @@ This repository contains my C++ solutions to competitive programming problems fr
 
 > A personal archive for practice, learning, and problem-solving reference.
 
-> *"May Allah turn your Wrong Answers into Accepted and your TLEs into barakah."* 🙌
+**> *"May Allah turn your Wrong Answers into Accepted and your TLEs into barakah."* 🙌
+**
