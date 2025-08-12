@@ -1,6 +1,5 @@
 # Competitive-Programming
 
-# Competitive Programming Solutions
 
 This repository contains my solutions to various competitive programming problems, organized by topic and platform.  
 All solutions are implemented in C++ with clean, well-commented code and efficient algorithms.
