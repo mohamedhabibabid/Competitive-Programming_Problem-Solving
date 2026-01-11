@@ -19,14 +19,14 @@ public:
                 dp[i][j]=grid[i][j]+ min(dp[i-1][j],dp[i][j-1]);
             }
         }
-        for(int i=0; i< n; i++){
-            // dp[i][0]=dp[i-1][0]+grid[i][0];
-            for(int j=0; j< m; j++){
-                cout<<dp[i][j]<<' ';
-            }
-            cout<<endl;
-        }
-        cout<<dp[0][2];
+        // for(int i=0; i< n; i++){
+        //     // dp[i][0]=dp[i-1][0]+grid[i][0];
+        //     for(int j=0; j< m; j++){
+        //         cout<<dp[i][j]<<' ';
+        //     }
+        //     cout<<endl;
+        // }
+        // cout<<dp[0][2];
         return dp[n-1][m-1];
     }
 };
