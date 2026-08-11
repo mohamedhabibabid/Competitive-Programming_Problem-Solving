@@ -1,5 +1,5 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 #define all(v) v.begin(),v.end()
@@ -19,41 +19,27 @@ void FastIO() {
 }
 
 void solve() {
-    int n, m, q;
-    cin >> n >> m >> q;
+    int n, q;
+    cin >> n >> q;
 
-    vector<vector<int>> pref(n + 1, vector<int>(m + 1, 0));
+    vector<int> pref(n + 1, 0);
 
-    // Read matrix
+    // Read array
     for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= m; j++) {
-            cin >> pref[i][j];
-        }
+        cin >> pref[i];
     }
 
-    // Prefix rows
+    // Build prefix sum
     for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= m; j++) {
-            pref[i][j] += pref[i][j - 1];
-        }
-    }
-
-    // Prefix columns
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= m; j++) {
-            pref[i][j] += pref[i - 1][j];
-        }
+        pref[i] += pref[i - 1];
     }
 
     // Queries
     while (q--) {
-        int x1, y1, x2, y2;
-        cin >> x1 >> y1 >> x2 >> y2;
+        int l, r;
+        cin >> l >> r;
 
-        int ans = pref[x2][y2]
-                - pref[x1 - 1][y2]
-                - pref[x2][y1 - 1]
-                + pref[x1 - 1][y1 - 1];
+        int ans = pref[r] - pref[l - 1];
 
         cout << ans << '\n';
     }
